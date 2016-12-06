@@ -1,0 +1,304 @@
+﻿body {
+    font-size: .85em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+    background-color: #fff;
+}
+
+header, footer, nav, section {
+    display: block;
+}
+/**************************************************************/
+.site-url {
+    background: rgb(39, 68, 118);
+    padding: 2px;
+    margin: 0;
+    width: auto;
+}
+#title {
+   font-size: 1em;
+   margin: 0 0 0px;
+   color: ghostwhite;
+}
+#login {
+   font-size: .85em;
+   margin: 0 0 0px;
+   text-align: left;
+   padding: 2px;
+   color: ghostwhite;
+   width: auto;
+}
+.wrapper {
+    overflow:hidden;
+    display: block;
+}
+.right {
+    padding: 5px;
+    width: 250px;
+    float:right;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.left {
+    padding: 5px;
+    width:250px;
+    float:left;
+}
+tr.top {
+    max-height: 30px;
+    text-align:left;
+}
+.tables {
+    float:left;
+}
+
+.user {
+    color: rgb(39, 68, 118);
+    font-weight: bold;
+}
+.user_tag {
+    color: rgb(39, 68, 118);
+    font: bold;
+    font-weight: bold;
+}
+#allComments {
+    max-height: 500px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.commentText {
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    width: 50px;
+    overflow: hidden;
+}
+/*--------------------------------------------------------------
+    From Nereus Site.css
+    */
+#logoutForm
+{
+    display: inline;
+}
+
+.nav-bar
+{
+    background: rgb(39, 68,118);
+    padding: 8px; 
+    margin: 0;
+}
+
+section#body {
+   margin-left: 20px;
+   margin-right: 20px;
+  
+}
+.site-title 
+{
+   display: inline;
+   font-size: 1.3em;
+   font-weight: 600;
+   margin: 0 0 5px;
+   padding: 2px;
+   background: none;
+   color: ghostwhite;
+   text-decoration: none;
+}
+
+.image-action
+{
+   cursor: pointer;
+}
+
+nav
+{
+   display: inline;
+}
+
+p.copyright
+{
+   text-align: right;
+   position:absolute;
+   bottom: 30px;
+   right: 10px;
+}
+
+.dialog-error
+{
+   display: none;
+   color: red;
+}
+
+.action-link {
+   color: rgb(39, 68,118);
+   text-decoration: underline;
+   cursor: pointer;
+}
+legend#setting-title {
+    color: rgb(39, 68,118);
+    font-style:normal;
+    font-size: 1em;
+    border: 1px solid rgb(39, 68,118);
+    padding: 2px 4px;
+    background: #d3d6d7;
+    border-radius: 2px;
+}
+legend#projectName {
+    color: rgb(39, 68,118);
+    font-style:normal;
+    font-size: 1em;
+    border: 1px solid rgb(39, 68,118);
+    padding: 2px 4px;
+    background: #d3d6d7;
+    border-radius: 2px;
+}
+/*Forms------------------------------------------------------------*/
+fieldset {
+    border: 1px solid rgb(39, 68,118);
+    border-radius: 4px;
+    margin-bottom: 4em;
+}
+    fieldset#interfaceSettings {
+        width: 300px;
+        display: inline-block;
+        height: auto;
+    }
+    fieldset#searchSettings {
+        width: 300px;
+        display: inline-block;
+        height: auto;
+    }
+    fieldset#createProject {
+        width: 350px;
+        display: inline-block;
+        height: auto;
+    }
+    fieldset#editProject {
+        width: 350px;
+        display: inline-block;
+        height: auto;
+    }
+/* login ----------------------------------------------------------*/
+#login
+{
+   display: inline;
+   font-size: .85em;
+   margin: 0 0 10px;
+   text-align: right;
+   float: right;
+   color: ghostwhite;
+}
+
+   #login a
+   {
+      margin-left: 10px;
+      margin-right: 3px;
+      padding: 2px 3px;
+      text-decoration: none;
+   }
+
+      #login a.username
+      {
+         background: none;
+         margin: 0;
+         padding: 5px;
+         text-decoration: underline;
+      }
+
+   #login ul
+   {
+      margin: 0;
+   }
+
+   #login li
+   {
+      display: inline;
+      list-style: none;
+   }
+
+
+/* menu ----------------------------------------------------------*/
+ul#menu
+{
+   display: inline;
+   font-size: 1.3em;
+   font-weight: 600;
+   margin: 0 0 5px;
+   padding: 0;
+}
+
+   ul#menu li
+   {
+      display: inline;
+      list-style: none;
+      padding-left: 15px;
+   }
+
+      ul#menu li a
+      {
+         background: none;
+         color: #cbcbcb;
+         text-decoration: none;
+      }
+
+         ul#menu li a:hover
+         {
+            color:#5c5c5c ;
+            text-decoration: none;
+         }
+
+    ul#menu li.pageLink a {
+        color: ghostwhite;
+        text-decoration: none;
+    }
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 75px;
+    min-width: 225px;
+}
+
+.editor-label {
+    margin: 1em 0 0 0;
+}
+
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}

@@ -1,0 +1,50 @@
+﻿<table>
+   <tbody>
+      <tr>
+         <td>
+            <span id="visibility">
+               <input type="radio" id="hidden" name="visibility" /><label for="hidden"><img class="hidden" src="@Url.Content("~/Images/Hash-16.png")" /></label>
+               <input type="radio" id="not-hidden" name="visibility" /><label for="not-hidden"><img class="not-hidden" src="@Url.Content("~/Images/Hash-16.png")" /></label>
+               <input type="radio" id="visibility-both" name="visibility" checked="checked"/><label for="visibility-both">Both</label>
+            </span>               
+         </td>
+         <td>
+            <div class="rating-filter @(Model.Ratings.Contains(0)? "filter-checked" : string.Empty)" id="no-stars">
+               <img src="@Url.Content("~/Images/Raty/star-off.png")"/>
+               <img src="@Url.Content("~/Images/Raty/star-off.png")"/>
+               <img src="@Url.Content("~/Images/Raty/star-off.png")"/>
+            </div>
+         </td>
+         <td>
+            <span class="rating-filter @(Model.Ratings.Contains(2)? "filter-checked" : string.Empty)" id="two-stars">
+               <img src="@Url.Content("~/Images/Raty/star-on.png")"/>
+               <img src="@Url.Content("~/Images/Raty/star-on.png")"/>
+               <img src="@Url.Content("~/Images/Raty/star-off.png")"/>
+            </span>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <span id="relevance">
+               <input type="radio" id="irrelevant" name="relevance" /><label for="irrelevant"><img class="irrelevant hasTooltip" src="@Url.Content("~/Images/Button-Close-16.png")" title="Mark irrelevant"/></label>
+               <input type="radio" id="not-irrelevant" name="relevance" /><label for="not-irrelevant"><img class="not-irrelevant hasTooltip" src="@Url.Content("~/Images/Button-Close-16.png")"/></label>
+               <input type="radio" id="relevance-both" name="relevance" checked="checked"/><label for="relevance-both">Both</label>               
+            </span>
+         </td>
+         <td>
+            <span class="rating-filter @(Model.Ratings.Contains(1)? "filter-checked" : string.Empty)" id="one-star">
+               <img src="@Url.Content("~/Images/Raty/star-on.png")"/>
+               <img src="@Url.Content("~/Images/Raty/star-off.png")"/>
+               <img src="@Url.Content("~/Images/Raty/star-off.png")"/>
+            </span>            
+         </td>
+         <td>
+            <span class="rating-filter @(Model.Ratings.Contains(3)? "filter-checked" : string.Empty)" id="three-stars">
+               <img src="@Url.Content("~/Images/Raty/star-on.png")"/>
+               <img src="@Url.Content("~/Images/Raty/star-on.png")"/>
+               <img src="@Url.Content("~/Images/Raty/star-on.png")"/>
+            </span>
+         </td>
+      </tr>
+   </tbody>
+</table>

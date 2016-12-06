@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Nereus - Tagging and Commenting</title>
+  
+    @Scripts.Render("~/bundles/jquery")
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/themes/base/jquery-ui.css")
+    @Styles.Render("~/Content/Common/Site.css")
+    @RenderSection("scripts", required: false)
+</head>
+<body>
+    <header class="site-url">
+        <p class="site-url" id="title">URL: @Request.Url.AbsoluteUri</p>
+        <p class="site-url" id ="login"> Logged in as: @User.Identity.Name</p>
+    </header>
+    @RenderBody()
+    
+   
+   
+</body>
+</html>

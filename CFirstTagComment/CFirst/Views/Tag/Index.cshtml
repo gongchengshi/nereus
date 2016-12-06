@@ -1,0 +1,56 @@
+﻿@*Tag - Index*@
+@using CFirst.ViewModels
+@using CFirst.Models
+@using System.Linq
+
+@model CFirst.ViewModels.UrlViewModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Scripts.Render("~/Scripts/Page/TagForm.js")
+<table>
+    <tbody>
+        <tr>
+            <th class="left">Tags</th>
+            <th class="middle"></th>
+            <th class="right">Comments</th>
+        </tr>
+        <tr>
+            <td class="left">
+                <input id="newTags" name="newTags" type="text"/>
+                <input id="submitTag"  name="tag" type="button" value="Add" /> 
+            </td>
+            <td class="middle"></td>
+            <td class="right">
+                <textarea id="newComments" cols="20" rows="2"></textarea>
+                <input id="submitComment" name="comment" type="button" value="Add" /> 
+            </td>
+        </tr>
+        <tr>
+            <td class="left" id="userTags">
+                 @foreach(var tag in Model.Tags)
+                    {
+                        <span @(tag.Users.Contains(Model.User)? "class=\"user_tag\"" : "")>@tag.Name&nbsp;</span>
+                     
+                    }
+            </td>
+            <td class="middle"></td>
+            <td class="right" id="userComments"> </td>
+        </tr>
+        <tr>
+            <td class="left" id="allTags">
+                
+            </td>
+            <td class="middle"></td>
+            <td class="right" id="allComments">
+                @for (int i = 0; i < @Model.Comments.Count; i++)
+                {
+                    <p>@Model.Comments[i].Content -<span class ="user">@Model.Comments[i].User.Name</span> - @Model.Comments[i].Created </p>
+                }
+            </td>
+        </tr>
+    </tbody>
+</table>
+

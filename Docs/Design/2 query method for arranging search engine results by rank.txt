@@ -1,0 +1,31 @@
+Table:
+url1 goog1 1
+url2 goog1 2
+url3 goog1 3
+url4 goog1 4
+url1 bing1 2
+url2 bing1 1
+url3 bing1 5
+url4 bing1 6
+
+Query1 Result:
+url1 goog1 1
+url2 bing1 1
+url2 goog1 2
+url1 bing1 2
+url3 goog1 3
+
+Query2 Result:
+url3 bing1 5
+
+First three:
+url1 
+	goog 1
+	bing 2
+url2
+	goog 2
+	bing 1
+url3 
+	goog 3
+	bing 5
+

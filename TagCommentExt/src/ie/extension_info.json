@@ -1,0 +1,19 @@
+{
+  "id": "{CF0DC9EE-F951-49B9-BD8E-50A1FAA867D7}", 
+  "com_objects": {
+    "engine": {
+      "iid": "{EDAD066E-C78C-4950-BEBF-1481FD18827F}", 
+      "libid": "{2BA2C59E-9843-42A0-A39F-0A6E5D90C530}", 
+      "clsid": "{EDD80682-C7F8-499E-BBF2-9E813C182C7F}"
+    }, 
+    "toolbar": {
+      "iid": "{6C208957-3E61-457F-B689-D079B7403922}", 
+      "clsid": "{6C398974-3E83-4566-8949-C5796140E422}"
+    }, 
+    "bho": {
+      "iid": "{CFE7C91D-F950-49CF-8498-4CA1E8A8EAD7}", 
+      "libid": "{403BCC8F-56F3-48B1-A88F-F0D954BC92AC}", 
+      "clsid": "{CF0DC9EE-F951-49B9-BD8E-50A1FAA867D7}"
+    }
+  }
+}

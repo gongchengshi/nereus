@@ -1,0 +1,16 @@
+﻿#search-period-datepicker {
+   width: 100px;
+   margin: 0 auto;
+}
+
+#search-period-menu li {
+   cursor: pointer;
+}
+
+#search-period-menu li:hover {
+   background:azure;
+}
+
+#search-period-dd {
+   cursor: pointer;
+}

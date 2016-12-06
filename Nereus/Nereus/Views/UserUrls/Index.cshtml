@@ -1,0 +1,32 @@
+@model IEnumerable<Nereus.Models.UserUrl>
+
+@{
+    ViewBag.Title = "Your Browsing history";
+}
+
+<h2>Your Browsing History</h2>
+
+<table>
+    <tr>
+        <th>
+            URL
+        </th>
+        <th>
+            Last Viewed
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+			@Html.DisplayTextFor(_ => item.Url.Path).ToString()
+        </td>
+        <td>
+			@String.Format("{0:g}", item.LastViewed)
+        </td>
+    </tr>
+}
+
+</table>
+
+

@@ -1,0 +1,61 @@
+﻿@using Gongchengshi.Web
+
+@model Nereus.Models.UserUISettings
+@{
+    ViewBag.Title = "Settings";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Styles.Render("~/Content/Common/Common.css")
+<div id="topBar">
+    <h2 class="pageBody">Account Management: User settings</h2>
+</div>
+<section class="pageBody" style="margin-top: 10px">
+<form class="pageBody">
+    <fieldset id="interfaceSettings">
+        <legend id="setting-title">Interface Settings
+        </legend>
+        <table>
+            <tr>
+                <th class="title">Setting</th>
+                <th></th>
+                <th>On/Off</th>
+            </tr>
+            <tr id="tooltip">
+                <td>Tooltips
+                </td>
+                <td></td>
+                <td>
+                    <input class="tooltipCheckbox hasTooltip" type="checkbox" id="settings-tooltip" name="toggleTooltip" @(Model.TooltipsOn ? "checked=\"checked\"" : string.Empty) title="Hide/Show hovering tooltips"/>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset id="searchSettings">
+        <legend id="setting-title">Search Settings
+        </legend>
+        <table>
+            <tr>
+                <th class="title">Setting</th>
+                <th>1 - 100</th>
+            </tr>
+            <tr id="NumSearchResults">
+                <td>Results<br /> per page
+                </td>
+                <td>
+                    <input class="searchResultsNum hasTooltip" type="text" id="settings-searchResultsNum"  onkeypress="sbmt" size="1" title="Enter the number of search results to display" />
+                </td>
+            </tr>
+            <tr></tr>
+            <tr id="saveSettingsBtn">
+                 <td>
+                    <input class="saveSearchSettingsBtn hasTooltip" type="button" id="saveSearchSettings"  value="Save Settings" title="Click to save your search settings"/>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+</form>
+
+<p>
+    <input type="button" class="OkBtn hasTooltip" value="Ok" onclick="location.href = 'Search';" title="Clicking OK saves your settings and takes you to the homepage" />
+</p>
+</section>

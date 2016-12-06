@@ -1,0 +1,18 @@
+﻿
+<select  class="hasTooltip" name="Project" title="Select a project for searching">
+   @{    
+      if (Model.UserProject != null)
+      {
+         <option value="@Model.UserProject.Id">@Model.UserProject.Name (private)</option>
+      }
+      
+      foreach(var project in Model.Projects)
+      {
+         if (Model.UserProject != null && project.Id == Model.UserProject.Id)
+         {
+            continue;
+         }
+         <option value="@project.Id">@project.Name@(project.IsPrivate ? " (private)" : "")</option>
+      }
+   }
+</select>

@@ -1,0 +1,20 @@
+﻿@*URL- Index*@
+@using Nereus.TagsComments.Models
+@using System.Linq
+
+@model Nereus.TagsComments.Models.TagsCommentsModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Tags and Comments</h2>
+
+<p id="alphabetical">
+    @foreach(var tag in Model.Tags.OrderBy(tag => tag.Name))
+    {
+        <span @(tag.Users.Contains(Model.User)? "class=\"user_tag\"" : "")>@tag.Name&nbsp;</span>
+                     
+    }
+</p>

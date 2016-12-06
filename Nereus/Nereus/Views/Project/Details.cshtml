@@ -1,0 +1,42 @@
+@model Nereus.Models.Project
+
+@{
+   ViewBag.Title = "Details";
+   Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+   <legend>Project</legend>
+
+   <div class="display-label">Name</div>
+   <div class="display-field">@Model.Name</div>
+   <div class="display-label">
+      @Html.DisplayNameFor(model => model.IsPrivate)
+   </div>
+   <div class="display-field">
+      @Html.DisplayFor(model => model.IsPrivate)
+   </div>
+   <div>
+      @if (Model.Users == null)
+      {
+         <span>No users</span>
+      }
+      else
+      {
+         <ul>
+            @foreach (var user in Model.Users)
+            {
+               <li>@user.FullName</li>
+            }
+         </ul>
+      }
+   </div>
+</fieldset>
+<p>
+   @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+

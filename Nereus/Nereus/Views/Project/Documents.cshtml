@@ -1,0 +1,66 @@
+﻿@using Gongchengshi.Web
+@model Nereus.ViewModels.UrlsViewModel
+
+@{
+   ViewBag.Title = "Project Documents";
+   Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Styles.Render("~/Content/Common/ThirdParty/jquery.dropdown.css")
+@*@Styles.Render("~/Content/Common/Table.css")*@
+@Styles.Render("~/Content/Common/Common.css")
+@Styles.Render("~/Content/Page/Documents.css")
+
+@Scripts.Render("~/Scripts/Common/ThirdParty/jquery.dropdown.js")
+@Scripts.Render("~/Scripts/Common/ThirdParty/jquery.raty.js")
+@Scripts.Render("~/Scripts/Common/Common.js")
+@Scripts.Render("~/Scripts/Common/UrlActionsDropdown.js")
+@Scripts.Render("~/Scripts/Site/UrlActions.js")
+@Scripts.Render("~/Scripts/Page/Documents.js")
+
+<div id="topBar">
+<h2 class="pageBody">@Model.ProjectName Pages</h2>
+</div>
+@Html.Partial("UrlActionsDropdown")
+
+<table class="pageBody" style="margin-top: 10px;">
+   <colgroup>
+      <col class="content" />
+   </colgroup>
+   <thead>
+      <tr>
+         <th>
+            <img id="visibility-filter" class="hasTooltip @(Model.Hidden ? "hidden" : "not-hidden")" src="@Url.Content("~/Images/Hash-16.png")" title="Hide/unhide result"/>
+            <img id="relevance-filter" class="hasTooltip @(Model.Irrelevant ? "irrelevant" : "not-irrelevant")" src="@Url.Content("~/Images/Button-Close-16.png")" title="Mark irrelevant"/>
+            <span id="rating-filter" class="hasTooltip rating" score="@(Model.Rating >= 0 ? Model.Rating : 0)" />
+         </th>
+         <th></th>         
+         <th></th>
+         <th></th>
+      </tr>
+   </thead>
+   <tbody>
+      @foreach (var item in Model.Urls)
+      {
+         <tr class="url-item" id="item-@item.Id">
+            <td>
+               <img class="visibility hasTooltip @(item.Hidden || item.HasHiddenPattern ? "hidden" : "not-hidden")" src="@Url.Content("~/Images/Hash-16.png")" title="Hide/unhide result"/>
+               <img class="relevance hasTooltip @(item.Irrelevant || item.HasIrrelevantPattern ? "irrelevant" : "not-irrelevant")" src="@Url.Content("~/Images/Button-Close-16.png")" title="Mark irrelevant"/>
+               <span id="rating-@item.Id" class="rating hasTooltip" score="@(item.Rating >= 0 ? item.Rating : 0)" />
+            </td>
+            <td>
+               <img class="actions-dropdown-btn" data-dropdown="#actions-dropdown" data-horizontal-offset="-8" 
+                  src ="@((item.HasHiddenPattern || item.HasIrrelevantPattern)? Url.Content("~/Images/arrow_down-red-16.png") : Url.Content("~/Images/arrow_down-grey-16.png"))"/>
+            </td>
+            <td><a href="@item.Url.Path" class="result-link">@item.Url.Path</a></td>
+            <td>
+               @*
+               Todo: Implement Document Details
+               @Html.ImageLink("~/Images/Info-18.png", "Details", new { id = item.Id })
+               *@
+            </td>
+         </tr>
+      }
+   </tbody>
+</table>
+

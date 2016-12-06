@@ -1,0 +1,14 @@
+﻿@Styles.Render("~/Content/Page/UrlActionsDropdown.css")
+
+<div id="actions-dropdown" class="dropdown dropdown-tip @(ViewBag.AnchorRight != null && ViewBag.AnchorRight? "dropdown-anchor-right" : string.Empty)">
+   <ul class="dropdown-menu">
+      <li id="custom-path-item">
+         <span><input type="radio" name="path-option-radio" id="custom-path-radio" /><input type="text" value="" id="custom-path" /></span>
+      </li>
+      <li>
+         <button type="button" id="mark-path-irrelevant-btn">Mark Irrelevant</button>
+         <button type="button" id="hide-path-btn">Hide</button>
+      </li>
+      <li><span class="input-error" id="actions-dropdown-error"></span></li>
+   </ul>
+</div>

@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Nereus</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+
+    @Styles.Render("~/Content/Common/ThirdParty/themes/base/jquery-ui.css")
+    @Styles.Render("~/Content/Common/Site.css")
+
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/Scripts/Common/ThirdParty/URI.js")
+    @Scripts.Render("~/Scripts/Common/ThirdParty/jquery.cookie.js")
+    @Scripts.Render("~/Scripts/Common/jquery.cookie.helpers.js")
+    @Scripts.Render("~/Scripts/Common/Common.js")
+    @Scripts.Render("~/Scripts/Common/URI.helpers.js")
+    @Scripts.Render("~/Scripts/Site/Common.js")
+    <script>
+        //Gets user tooltip setting 
+        tooltipsOn = "@Html.Action("UserTooltipSetting", "UserSettings")";
+    </script>
+    @Scripts.Render("~/Scripts/Page/Settings.js")
+
+</head>
+<body>
+    <header class="nav-bar">
+        <span class="site-title">Nereus</span>
+        <nav>
+            <ul id="menu">
+                <li class="hasTooltip pageLink" title="Search using Google or Yahoo">@Html.ActionLink("Search", "Index", "Search")</li>
+                <li class="hasTooltip" title="List of search projects">@Html.ActionLink("Projects", "Index", "Project")</li>
+                <li class="hasTooltip" title="List of past queries">@Html.ActionLink("Queries", "Queries", "Project")</li>
+                <li class="hasTooltip" title="List of ranked pages for the currently selected project">@Html.ActionLink("Pages", "Documents", "Project")</li>
+                <li class="hasTooltip" title="List of search results for the currently selected project marked as irrelevant">@Html.ActionLink("Irrelevant Paths", "IrrelevantPaths", "Project")</li>
+                <li class="hasTooltip" title="List of search results for the currently selected project marked as hidden">@Html.ActionLink("Hidden Paths", "HiddenPaths", "Project")</li>
+                <li class="hasTooltip" title="Manage account settings">@Html.ActionLink("Settings", "Index", "UserSettings")</li>
+            </ul>
+        </nav>
+        <section id="login">
+            Logged in as: <span class="username">@User.Identity.Name</span>
+        </section>
+    </header>
+
+    <div id="center-col">
+        <section id="body" >
+            @RenderBody()
+        </section>
+    </div>
+    @RenderSection("Scripts", false)
+</body>
+</html>

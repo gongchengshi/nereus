@@ -1,0 +1,51 @@
+﻿@using Nereus.Models
+@model Nereus.ViewModels.SearchResultsViewModel
+
+@Styles.Render("~/Content/Page/QueryForm.css")
+@Scripts.Render("~/Scripts/Page/QueryForm.js")
+
+<table class="searchBar">
+  <tr id="searchBar">
+    <td class="searchPic">
+      <img id="searchPic" src="@Url.Content("~/Images/Logo.png")" alt="Pic" />
+    </td>
+    <td id="searchBox">
+      <input list="RecentQueries" name="q" value="@(Model.SearchResults == null ? string.Empty : Model.SearchResults.Query)" autocomplete="off" />
+      <datalist id="RecentQueries">
+        @{
+          foreach (var query in Model.RecentQueries)
+          {
+            <option value="@query.Text">@query.LastUsed.ToLocalTime()</option>
+          }
+        }
+      </datalist>
+      <button type="button" id="search">Search</button>
+      <button type="button" class="hasTooltip" id="new-project-search" title="Start a new search project">New Project Search</button>
+
+      @Html.Partial("SearchPeriodDropdown", Model.SearchPeriod ?? new SearchPeriod())
+      
+      <span id="showGooglebotBlockedOnly">
+          <input type="checkbox" name="showGooglebotBlockedOnly" value="checked" />Not in Google</span> 
+    </td>
+    <td id="selectProject">@Html.Partial("ProjectSelector")</td>
+  </tr>
+</table>
+@*
+  <select name="SearchProfile">
+     @{
+        <option value="-1" selected="selected">Default</option>
+        foreach(var searchProfile in Model.SearchProfiles)
+        {
+           <option value="@searchProfile.Id">@searchProfile.Name (@searchProfile.SearchPeriod)</option>
+        }
+     }
+  </select>
+*@
+
+<div class="hasTooltip" id="dialog-new-project-search" title="Search with new project">
+  <label for="new-project-name">Project Name</label>
+  <input type="text" id="new-project-name" class="text ui-widget-content ui-corner-all" autocomplete="off" />
+  <label for="new-project-private">Private</label><input type="checkbox" class="hasTooltip" id="new-project-private" title="Mark search as private. Only you will be able to see results." />
+  <div class="dialog-error" id="dialog-new-project-search-error">A project already exists with the name <span id="invalid-project-name"></span></div>
+  <div class="dialog-error" id="dialog-default-error"></div>
+</div>

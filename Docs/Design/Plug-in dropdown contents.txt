@@ -1,0 +1,25 @@
+Last visited
+login, logout
+Switch project
+time-range search setting
+Project properties
+Web app
+Title
+URL
+tags
+comment
+private
+add link
+cancel
+save page
+Icon to signify that the page is versioned
+Watch
+Icon to signify that the user is watching the page
+Check caches
+Category
+Irrelevant to project
+New project
+Cite
+Crawl
+Get image/pdf if blocked by WebSense
+

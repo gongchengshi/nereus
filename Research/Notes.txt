@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+http://en.wikipedia.org/wiki/Yahoo!_Pipes
+http://pipes.yahoo.com/pipes/
+-------------------------------------------------------------------------------
+http://research.microsoft.com/pubs/165855/sigir12-dynamicsnippets_camera_ready.pdf
+http://support.google.com/webmasters/bin/answer.py?hl=en&answer=35624
+
+http://www.slideserve.com/sherlock_clovis/web-search-distributed-search-over-the-hidden-web
+
+http://www.aaai.org/Papers/AAAI/2008/AAAI08-189.pdf
+http://static.googleusercontent.com/external_content/untrusted_dlcp/research.google.com/en/us/pubs/archive/34382.pdf
+http://www.public.asu.edu/~zliu41/snippet.pdf
+
+http://www.mediawiki.org/wiki/Extension:CategoryTree

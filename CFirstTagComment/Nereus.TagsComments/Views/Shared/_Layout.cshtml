@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Nereus</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+
+
+    @Styles.Render("~/Content/Common/Site.css")
+    @Styles.Render("~/Content/Common/Common.css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+
+
+</head>
+<body>
+    <header class="nav-bar">
+        <span class="site-title">Nereus</span>
+        <nav>
+            <ul id="menu">
+                <li class="hasTooltip pageLink" title="Tags and Comments">@Html.ActionLink("Tags and Comments", "Index", "TagsComments")</li>
+            </ul>
+        </nav>
+        <section id="login">
+            Logged in as: <span class="username">@User.Identity.Name</span>
+        </section>
+    </header>
+
+    <div id="center-col">
+        <section id="body" >
+            @RenderBody()
+        </section>
+    </div>
+    @RenderSection("Scripts", false)
+</body>
+</html>

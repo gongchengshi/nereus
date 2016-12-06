@@ -1,0 +1,32 @@
+﻿@using System.ComponentModel.DataAnnotations
+@using Nereus.Models
+@using Gongchengshi
+
+@model SearchPeriod
+
+@Styles.Render("~/Content/Common/ThirdParty/jquery.dropdown.css")
+@Styles.Render("~/Content/Page/SearchPeriodDropdown.css")
+
+@Scripts.Render("~/Scripts/Common/ThirdParty/jquery.dropdown.js")
+@Scripts.Render("~/Scripts/Page/SearchPeriodDropdown.js")
+
+<span id="search-period-dd" data-dropdown="#search-period-menu" data-horizontal-offset="-8">
+   <img src="@Url.Content("~/Images/arrow_down-grey-16.png")" class="hasTooltip" title="Filter search results based on date" />
+   <span id="search-period">@(Model.StartDate == null? Model.SearchPeriodOption.GetAttribute<DisplayAttribute>().Name : "Since " + Model.StartDate.Value.ToLocalTime().ToString("d"))</span>
+</span>
+<div id="search-period-menu" class="dropdown">
+   <ul class="dropdown-menu">
+      @foreach (var searchPeriod in EnumExtensions.GetEnumValues<SearchPeriodOption>())
+      {
+         var attributes = searchPeriod.GetAttribute<DisplayAttribute>();
+         <li id="sp-@attributes.ShortName">
+            <input type="radio" name="search-period" @((!Model.StartDate.HasValue) && Model.SearchPeriodOption == searchPeriod? "checked=\"checked\"" : string.Empty) />
+            <span>@attributes.Name</span>
+         </li>
+      }
+      <li id="sp-c">
+         <input type="radio" disabled="disabled" name="search-period" id="custom-search-period" @(Model.StartDate.HasValue? "checked=\"checked\"" : string.Empty)/>
+         Since <input type="text" id="search-period-datepicker" value="@(Model.StartDate)"/>
+      </li>
+   </ul>
+</div>

@@ -1,0 +1,17 @@
+﻿ol {
+   padding-left: 0;
+}
+
+ol li {
+   list-style: none;
+   margin-bottom: 10px;
+   border-width: 1px;
+   border-color: #12c;
+}
+
+   ol li:hover
+   {
+      border-style: dotted;
+   }
+
+

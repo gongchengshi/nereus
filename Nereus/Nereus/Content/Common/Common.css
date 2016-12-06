@@ -1,0 +1,96 @@
+﻿/* used by Search/SearchResults.cshtml and Project/Documents.cshtml, most pages*/ 
+
+.visibility, .relevance {
+   cursor: pointer;
+}
+
+.visibility:hover, .relevance:hover {
+   opacity: 1;
+}
+
+.irrelevant {
+   opacity: 1;
+}
+
+.not-irrelevant {
+   opacity: 0.4;
+}
+
+.hidden {
+   opacity: 1;
+}
+
+.not-hidden {
+   opacity: 0.4;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Used by SearchResults.cshtml */
+
+.disabled {
+   cursor: none;
+}
+
+.enabled {
+   cursor: pointer;
+}
+
+.icon-toggle {
+   display: inline-block;
+   width: 16px;
+   height: 16px;
+   background-repeat: no-repeat;
+}
+
+.text-toggle {
+   font-weight: bold;
+}
+
+.icon-toggle.checked {
+   opacity: 1;
+}
+
+.icon-toggle.unchecked {
+   opacity: .4;
+}
+
+.icon-toggle:hover {
+   opacity: 1
+}
+
+.text-toggle.checked {
+   opacity: 1;
+}
+
+.text-toggle.unchecked {
+   opacity: .4;
+}
+
+.text-toggle:hover {
+   opacity: 1;
+}
+
+.text-toggle.disabled {
+   text-decoration: line-through;
+}
+
+/*Used by Project/Index.cshtml, Projects/Documents, Project/Paths */
+div#topBar {
+    background: #e4e4e4;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+}
+div#center-col {
+    margin: 0;
+}
+section#body {
+    margin: 0;
+}
+.pageBody {
+    margin-left: 10px;
+}

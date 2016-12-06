@@ -1,0 +1,36 @@
+﻿@using System.Text.RegularExpressions
+@model Nereus.ViewModels.PathsViewModel
+
+@{
+   ViewBag.Title = "IrrelevantPathList";
+   Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+   var pathType = "@Model.PathType";
+</script>
+@Styles.Render("~/Content/Common/Common.css")
+@Scripts.Render("~/Scripts/Page/Paths.js")
+<div id="topBar">
+<h2 class="pageBody">@Model.ProjectName @Model.PathType Paths</h2>
+</div>
+<table class="pageBody" style="margin-top: 10px;">
+   <colgroup>
+      <col class="delete" />
+      <col class="content" />
+   </colgroup>
+   <tbody>
+      @foreach (var item in Model.Patterns)
+      {
+         <tr class="item" id="@item.Id">
+            <td><img class="delete-path image-action" src="@Url.Content("~/Images/Trash-16.png")"/></td>
+            <td>@Regex.Unescape(item.Pattern)</td>
+         </tr>
+      }
+   </tbody>
+</table>
+
+<div class="hasTooltip" id="dialog-confirm" title="Are you sure?">
+   <span>Are you sure you want to delete this as an @Model.PathType.ToString().ToLower() path?</span>
+</div>
+

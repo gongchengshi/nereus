@@ -1,0 +1,29 @@
+{
+   "name":"Nereus",
+   "description":"Per URL actions provided by Nereus",
+   "version":"1.0",
+   "manifest_version":2,
+   "permissions":[
+      "<all_urls>",
+      "http://*/",
+      "webNavigation",
+      "tabs"],
+   "background":{
+      "scripts":["common.js", "Chrome/background.js"],
+      "persistent":false
+   },
+   "content_scripts": [
+      {"js": ["popup.js"], "matches": ["<all_urls>"], "all_frames":true}
+   ],
+   "browser_action":{
+      "default_icon":"Icons/YellowSub2/16.png",
+      "default_popup":"popup.html",
+      "default_title":"Nereus"
+   },
+   "icons":{
+      "128":"Icons/YellowSub2/128.png",
+      "48":"Icons/YellowSub2/48.png",
+      "32":"Icons/YellowSub2/32.png",
+      "15":"Icons/YellowSub2/16.png"
+   }
+}

@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Nereus</title>
+<style type="text/css">
+.right_aligned {
+	text-align: right;
+}
+.info {
+	position:absolute; 
+	right:0; 
+	font-size:76%
+}
+</style>
+</head>
+
+<body style="width:600px">
+<div id="header">
+<a id="title" href="">Nereus</a>
+<span class="right_aligned" id="logged_in">Logged in as <a id="logged_in_value" href="">Jeremy McLain</a></span></div><br/>
+<div id="current_project">Current <a href="">project</a> is <a href="" id="current_project_value">vegetarian hotdogs</a>&nbsp<a id="new_project" href="">New Project</a></div><br/>
+<div><input name="Checkbox1" type="checkbox" id="irrelevant">Irrelevant to Project</input><input name="Checkbox1" type="checkbox" id="irrelevant">Seen</input></form></div>
+<div><span id="last_visited">Last visited on <span id="last_visited_value">Dec 18, 2012</span></span>
+<span style="margin-left:40px" id="group_last_visited">Group last visited on <span id="group_last_visited_value">Dec 19, 2012 </span></span>&nbsp<button>Watch</button></div><br/>
+<div><span id="last_archived">Last archived on <a id="last_archived_value" href="">Dec 16, 2012</a></span>
+<span style="margin-left:40px" id="you_last_archived">Last archived by you on <a id="you_last_archived_value" href="">Dec 10, 2012</a></span></div>
+<div>&nbsp<button>Archive</button><button>Crawl</button><button>View as Image</button></div><br/>
+<select style="width:200px" name="Select1">
+	<option>Job Posting</option>
+	<option>Blog Post</option>
+</select>
+<form method="post" id="tag" class="tagForm">
+    <input name="key" id="key" class="hidden" type="hidden" value="">
+    <fieldset>
+      <ul id="tagFields">
+        <li id="titlefield" class="field title">
+	        <label for="title">Title</label>
+	        <span class="info">required</span>
+	        <input id="title" type="text" name="title" value="">
+        </li>
+        <li id="urlfield" class="field url">
+	        <label for="url">URL</label>
+	        <span class="info">required</span>
+	        <input id="url" type="text" class="text" name="url" value="">
+        </li>
+        <li id="tagfield" class="field tags">
+	        <label for="tags">TAGS</label>
+	        <span class="info">comma separated</span>
+	        <input id="tags" type="text" class="text" name="tags" value="">
+        </li>
+        <li>
+        	<select style="width:200px" name="Select1">
+				<option>Paper 1</option>
+				<option>Paper 2</option>
+			</select>
+        </li>
+	    <li id="commentfield" class="field note">
+	        <label for="note">COMMENT</label>
+	        <span class="info"><span id="commentcount" class="counter"><em>1000</em> characters left</span></span>
+	        <textarea id="comment" class="text" name="comment"></textarea>
+        </li>
+        <li id="" class="field footer">
+	        <div class="remember">
+	          <input type="checkbox" id="private" name="private" value="">
+	          <label for="private">Private</label>
+	        </div>
+	        <div class="bttns">
+	          <span class="btn btn-save">
+	            <input id="save" name="submit" type="submit" value="Add Link">
+	          </span>
+	          <span class="btn btn-cancel"><a id="cancel" href="#">Cancel</a></span>
+	        </div>
+        </li>
+      </ul>
+
+    </fieldset>
+  </form>
+  
+  <hr />
+  <div>
+ 	<a href="">Search Settings</a><br/> 	
+ 	<select style="width:200px" name="Select1">
+		<option>Last Week</option>
+		<option>Last Month</option>
+		<option>Last Year</option>		
+	</select>
+  </div>
+</body>
+
+</html>

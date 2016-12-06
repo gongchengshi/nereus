@@ -1,0 +1,91 @@
+﻿
+.input-error {
+   display: none;
+}
+
+.path-option {
+   display: block;
+}
+
+#num-results {
+   font-weight: bold;
+   color:dimgrey;
+}
+
+/* Results */
+table {
+   border-width: 0px;
+}
+
+.url-item {
+   line-height: 1.2;
+}
+
+.url-item.result-item-new {
+   background: antiquewhite;
+}
+
+cite {
+   color: #093;
+}
+
+.result-link {
+   font-size: medium;
+   font-weight: normal;
+   color: #12c;
+   text-decoration: underline;
+   cursor: pointer;
+}
+
+.visited-info {
+   color: grey;
+}
+/* End Results */
+
+/* Display Options */
+.col-summary {
+   font-weight: bold;
+   text-align: center;
+   color:dimgrey;
+}
+
+div.snippet em {
+   font-weight: bold;
+}
+
+td.actions {
+   width: 135px;
+}
+
+#visibility-filter.enabled {
+   background-image: url('/Images/Hash-16.png');
+}
+
+#visibility-filter.disabled {
+   background-image: url('/Images/NoneHidden.png');
+}
+
+#relevance-filter.enabled {
+   background-image: url('/Images/Button-Close-16.png');
+}
+
+#relevance-filter.disabled {
+   background-image: url('/Images/NoneIrrelevant.png');
+}
+#combined-filter.enabled {
+    background-image: url('/Images/Button-All-Green-16.png');
+}
+#combined-filter.disabled {
+    background-image: url('/Images/Button-All-Green-Off-16.png');
+}
+/* End Display Options */
+
+#nav {
+   margin-top: 30px;
+   text-align: center;
+}
+
+#dup-msg {
+   margin-top: 30px;
+   text-align: center; 
+}

@@ -1,0 +1,5 @@
+Tagging and annotating plugin
+
+Chrome plugin with the same capabilities as Delicious plugin
+
+Also has the ability to cite a URL for a given project

@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{D17CCFDD-2988-4A28-ADA4-2BB1F29D80E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{B1EABB8A-3678-4120-AD84-0DBE4237CEFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEL.Nereus.Atrax", "..\SEL.Nereus.Atrax\SEL.Nereus.Atrax.csproj", "{6A719ABF-AB4B-47A1-81DD-64BF0EA0A087}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEL.Nereus.Atrax.Tests", "SEL.Nereus.Atrax.Tests.csproj", "{472B4E43-337B-4ADC-B3A9-53D84B1943F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchProvidor", "..\..\..\web_mining\SearchProvidor\SearchProvidor.csproj", "{C43C6E49-C2EE-41CC-9321-89115B1EBA59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Web", "..\..\..\dotnet_common\Common.Web\Common.Web.csproj", "{3DB7E871-42BA-4A43-935B-707D552E0AAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		DevDeploy|Any CPU = DevDeploy|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Staging|Any CPU = Staging|Any CPU
+		Test|Any CPU = Test|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A719ABF-AB4B-47A1-81DD-64BF0EA0A087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A719ABF-AB4B-47A1-81DD-64BF0EA0A087}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A719ABF-AB4B-47A1-81DD-64BF0EA0A087}.DevDeploy|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A719ABF-AB4B-47A1-81DD-64BF0EA0A087}.DevDeploy|Any CPU.Build.0 = Debug|Any CPU
+		{6A719ABF-AB4B-47A1-81DD-64BF0EA0A087}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A719ABF-AB4B-47A1-81DD-64BF0EA0A087}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A719ABF-AB4B-47A1-81DD-64BF0EA0A087}.Staging|Any CPU.ActiveCfg = Release|Any CPU
+		{6A719ABF-AB4B-47A1-81DD-64BF0EA0A087}.Staging|Any CPU.Build.0 = Release|Any CPU
+		{6A719ABF-AB4B-47A1-81DD-64BF0EA0A087}.Test|Any CPU.ActiveCfg = Release|Any CPU
+		{6A719ABF-AB4B-47A1-81DD-64BF0EA0A087}.Test|Any CPU.Build.0 = Release|Any CPU
+		{472B4E43-337B-4ADC-B3A9-53D84B1943F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{472B4E43-337B-4ADC-B3A9-53D84B1943F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{472B4E43-337B-4ADC-B3A9-53D84B1943F9}.DevDeploy|Any CPU.ActiveCfg = Debug|Any CPU
+		{472B4E43-337B-4ADC-B3A9-53D84B1943F9}.DevDeploy|Any CPU.Build.0 = Debug|Any CPU
+		{472B4E43-337B-4ADC-B3A9-53D84B1943F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{472B4E43-337B-4ADC-B3A9-53D84B1943F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{472B4E43-337B-4ADC-B3A9-53D84B1943F9}.Staging|Any CPU.ActiveCfg = Release|Any CPU
+		{472B4E43-337B-4ADC-B3A9-53D84B1943F9}.Staging|Any CPU.Build.0 = Release|Any CPU
+		{472B4E43-337B-4ADC-B3A9-53D84B1943F9}.Test|Any CPU.ActiveCfg = Release|Any CPU
+		{472B4E43-337B-4ADC-B3A9-53D84B1943F9}.Test|Any CPU.Build.0 = Release|Any CPU
+		{C43C6E49-C2EE-41CC-9321-89115B1EBA59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C43C6E49-C2EE-41CC-9321-89115B1EBA59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C43C6E49-C2EE-41CC-9321-89115B1EBA59}.DevDeploy|Any CPU.ActiveCfg = Debug|Any CPU
+		{C43C6E49-C2EE-41CC-9321-89115B1EBA59}.DevDeploy|Any CPU.Build.0 = Debug|Any CPU
+		{C43C6E49-C2EE-41CC-9321-89115B1EBA59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C43C6E49-C2EE-41CC-9321-89115B1EBA59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C43C6E49-C2EE-41CC-9321-89115B1EBA59}.Staging|Any CPU.ActiveCfg = Test|Any CPU
+		{C43C6E49-C2EE-41CC-9321-89115B1EBA59}.Staging|Any CPU.Build.0 = Test|Any CPU
+		{C43C6E49-C2EE-41CC-9321-89115B1EBA59}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{C43C6E49-C2EE-41CC-9321-89115B1EBA59}.Test|Any CPU.Build.0 = Test|Any CPU
+		{3DB7E871-42BA-4A43-935B-707D552E0AAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DB7E871-42BA-4A43-935B-707D552E0AAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DB7E871-42BA-4A43-935B-707D552E0AAE}.DevDeploy|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DB7E871-42BA-4A43-935B-707D552E0AAE}.DevDeploy|Any CPU.Build.0 = Debug|Any CPU
+		{3DB7E871-42BA-4A43-935B-707D552E0AAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DB7E871-42BA-4A43-935B-707D552E0AAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DB7E871-42BA-4A43-935B-707D552E0AAE}.Staging|Any CPU.ActiveCfg = Test|Any CPU
+		{3DB7E871-42BA-4A43-935B-707D552E0AAE}.Staging|Any CPU.Build.0 = Test|Any CPU
+		{3DB7E871-42BA-4A43-935B-707D552E0AAE}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{3DB7E871-42BA-4A43-935B-707D552E0AAE}.Test|Any CPU.Build.0 = Test|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B1EABB8A-3678-4120-AD84-0DBE4237CEFB} = {D17CCFDD-2988-4A28-ADA4-2BB1F29D80E3}
+		{C43C6E49-C2EE-41CC-9321-89115B1EBA59} = {D17CCFDD-2988-4A28-ADA4-2BB1F29D80E3}
+		{3DB7E871-42BA-4A43-935B-707D552E0AAE} = {D17CCFDD-2988-4A28-ADA4-2BB1F29D80E3}
+	EndGlobalSection
+EndGlobal

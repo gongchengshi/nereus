@@ -1,0 +1,88 @@
+Unchecking private on a project should make it viewable by everybody in the group.
+-------------------------------------------------------------------------------
+Update last used time for queries when they are used again
+Allow only showing what has no rating in search results
+Allow giving entire paths a rating
+
+-------------------------------------------------------------------------------
+Perform a batch of queries at once
+Allow only showing what has no rating in search results
+Allow giving entire paths a rating
+
+Improve usability of Solr search results
+Translation from Google search syntax to Solr syntax
+Display on the SERP when a search result would not have been found by a Google/Yahoo
+Deploy
+Translation from Google’s search syntax to Yahoo!’s search syntax
+Search settings drop pane (NumResultsPerPage, column width)
+Query suggestions
+Search profiles
+Deploy - test migration procedures
+Edit project settings (users, private, …)
+Project creation from existing projects
+Organize projects into hierarchical groups
+Deploy
+Per URL details/actions on SERP and browser extension
+Add a privacy mode for browse tracking
+Query web archives and caches
+Deploy
+Proper group concurrency and workflow (marking the same URL differently at the same time).
+Deployment to BIU
+Identify which url patterns match the url for hide and irrelevant
+Highlight the search terms in the document when it is clicked on.
+Optionally show the title and snippet in the documents view.
+Deploy
+Tagging, citing, and annotating Chrome plug-in
+
+Web app for CRUDing and organizing tags, citations, and annotations
+Tag, annotate, and cite URL from SERP
+Deploy
+Create Google alerts from any query
+Deploy
+See WebSense blocked pages as an image or PDF
+Deploy
+Save version of page
+Deploy to cloud
+Page change tracking Chrome plug-in
+
+Web app for CRUDing and organizing tracked pages
+Deploy
+View diffs in tracked pages
+Deploy
+Crawl/index/search pages below a path
+UI for initiating crawl
+Deploy
+Custom Google search engines
+Horizontal partitioning of URL database and performance improvements
+Deploy
+Proximity crawler
+Deploy
+Search SharePoint using web API in order to search network drives and SharePoint.
+Deploy
+Investigate other ways to get search results from mainstream search engines such as Google.
+Custom non-Google search engines
+Deploy
+
+Unscheduled:
+For non-time range restricted queries interlace first 100 results from Google with Yahoo’s results.  Prefer Google’s snippets over Yahoo’s.
+Categorize page
+Filter out pages of a given category (job posting, commercial, news, blog, …)
+Automatic page categorization
+Group projects and associated settings
+Find similar / more like this
+Mark a URL as being irrelevant to a query
+Manual re-ranking
+Use URL/query relevance and re-ranking to tune search engine
+Search for projects
+Use version in web cache when saving pages
+Display date times in local time of browser.
+
+
+-------------------------------------------------------------------------------
+Add tool tips to buttons, provide a way to disable the tooltips, put a question mark in the tooltip that can be clicked on for more information
+-------------------------------------------------------------------------------
+-Experiment with scraping Google's results.
+-Experiment with grabbing the HTML of Google's SERP from a client's browser with a userscript and sending it to the server for scraping and then redirecting to a new page.
+-Experiment with creating Nereus SERP using userscript on Google's or WebCrawler's SERP?
+-Use an embedded web browser and mechanize to re-run the query in Google's form and scrape the results from the embedded web browser.
+-------------------------------------------------------------------------------

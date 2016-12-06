@@ -1,0 +1,179 @@
+<Project>
+  <Name>CFSP</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Data Model</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>URL</Name>
+        <Access>Public</Access>
+        <Location left="62" top="50" />
+        <Size width="163" height="111" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">String URL</Member>
+        <Member type="Field">ContentCategory Category</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Enum">
+        <Name>ContentCategory</Name>
+        <Access>Public</Access>
+        <Location left="1221" top="36" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+      </Entity>
+      <Entity type="Class">
+        <Name>SearchProject</Name>
+        <Access>Public</Access>
+        <Location left="548" top="50" />
+        <Size width="335" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string Name</Member>
+        <Member type="Field">User PrivateTo</Member>
+        <Member type="Field">ProjectURL[] URLs</Member>
+        <Member type="Field">Dictionary&lt;ContentCategory, Action&gt; ContentCategoryActions</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ProjectContainer</Name>
+        <Access>Public</Access>
+        <Location left="943" top="50" />
+        <Size width="163" height="94" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">SearchProject[] Projects</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Enum">
+        <Name>SearchEngine</Name>
+        <Access>Public</Access>
+        <Location left="1221" top="164" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+      </Entity>
+      <Entity type="Class">
+        <Name>SearchResultItem</Name>
+        <Access>Public</Access>
+        <Location left="62" top="517" />
+        <Size width="167" height="162" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string Snippet</Member>
+        <Member type="Field">int Rank</Member>
+        <Member type="Field">SearchEngine SearchEngine</Member>
+        <Member type="Field">URL URL</Member>
+        <Member type="Field">Query Query</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Query</Name>
+        <Access>Public</Access>
+        <Location left="317" top="550" />
+        <Size width="163" height="94" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string Text</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Enum">
+        <Name>Action</Name>
+        <Access>Public</Access>
+        <Location left="1221" top="102" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+      </Entity>
+      <Entity type="Class">
+        <Name>User</Name>
+        <Access>Public</Access>
+        <Location left="548" top="291" />
+        <Size width="163" height="94" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string Name</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ProjectURL</Name>
+        <Access>Public</Access>
+        <Location left="263" top="168" />
+        <Size width="170" height="162" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">URL URL</Member>
+        <Member type="Field">Action Action</Member>
+        <Member type="Field">DateTime DateHashUpdated</Member>
+        <Member type="Field">DateTime DateViewed</Member>
+        <Member type="Field">string Hash</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ProjectSearchEngineQuery</Name>
+        <Access>Public</Access>
+        <Location left="609" top="517" />
+        <Size width="185" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">SearchProject Project</Member>
+        <Member type="Field">User LastRunBy</Member>
+        <Member type="Field">SearchEngine SearchEngine</Member>
+        <Member type="Field">Query Query</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="3" second="2">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="9" second="0">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="2" second="8">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="2" second="9">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="5" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="5" second="6">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="10" second="8">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="10" second="6">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="10" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>746</X>
+          <Y>225</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>

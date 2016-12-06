@@ -1,0 +1,53 @@
+﻿{
+   "from": {{from}},
+   "size": {{size}},
+   "query": {
+      "filtered": {
+         "query": {
+            "multi_match": {
+                "query": "{{query_text}}",
+                "fields": [
+                    "title",
+                    "title.default",
+                    "title.bigram",
+                    "body",
+                    "body.default",
+                    "body.bigram"
+                    ]
+            }
+         },
+         "filter": {
+            "and": [
+               { "term": { "language": "{{language}}" } },
+               { "term": { "googlebot_blocked" : {{googlebot_blocked}} } }
+            ]
+         }
+      }
+   },
+   "fields": [
+      "googlebot_blocked",
+      "url",
+      "language",
+      "title",
+      "similarity_hash_digest"
+   ],
+   "highlight": {
+      "fields": {
+         "title": {
+             "matched_fields": [
+                    "title",
+                    "title.default",
+                    "title.bigram"
+                 ]
+         },
+         "body": {
+            "matched_fields": [
+                    "body",
+                    "body.default",
+                    "body.bigram"
+                 ]
+         },
+         "url": {}
+      }
+   }
+}

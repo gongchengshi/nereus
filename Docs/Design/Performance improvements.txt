@@ -1,0 +1,11 @@
+Figure out which is faster:
+
+   try:
+      QueryResult.objects.create(query=query, url=url_row)
+   except IntegrityError:
+      transaction.rollback()
+
+or
+
+   QueryResult.objects.get_or_create(query=query, url=url_row)
+   

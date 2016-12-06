@@ -1,0 +1,59 @@
+@using Gongchengshi.Web
+@model IEnumerable<Nereus.Models.Project>
+
+@{
+   ViewBag.Title = "Projects";
+   Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Styles.Render("~/Content/Common/Common.css")
+@Scripts.Render("~/Scripts/Page/ProjectList.js")
+
+<div id="topBar">
+    <h2 class="pageBody">Projects</h2>
+</div>
+<p class="hasTooltip pageBody" title="Create a new search project">
+   @Html.ActionLink("Create New", "Create")
+</p>
+
+<table class="pageBody">
+   <tr>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th>Name</th>
+      <th>Private</th>
+   </tr>
+
+   @foreach (var item in Model)
+   {
+      <tr id="@item.Id" >
+         <td  class="hasTooltip" title ="Select project">
+            <input type="radio" id="project-@item.Id" name="current-project" value="@item.Id" />
+         </td>
+         <td class="hasTooltip" title="Edit project properties">            
+            @Html.ImageLink("~/Images/Project-edit-16.png", "Edit", new { id = item.Id })
+         </td>
+            @*
+            Todo: finish implementing these pages.
+            @Html.ImageLink("~/Images/Project-edit-16.png", "Edit", new { id = item.Id })
+            @Html.ImageLink("~/Images/Info-18.png", "Details", new { id = item.Id })
+            *@
+         <td class="hasTooltip" title ="Delete project">
+            <img class="delete-project image-action" src="@Url.Content("~/Images/Trash-16.png")" />
+         </td>
+         <td class="project-name">@item.Name</td>
+         <td>
+            <input type="checkbox" class="private hasTooltip" @(item.IsPrivate ? "checked=\"checked\"" : string.Empty) value="@item.Id" title="Check box to make search private. Only you will be able to see the results."/>
+         </td>
+      </tr>
+   }
+
+</table>
+
+<div class="hasTooltip" id="dialog-private-error" title="The project has multiple users">
+   <span>You may only mark a project private if you are the only user in the project.</span>
+</div>
+
+<div class="hasTooltip" id="dialog-delete-confirm" title="Are you sure?">
+   <span class="ui-icon ui-icon-alert"></span><span>Are you sure you want to delete the project named "</span><span id="delete-project-name"></span><span>"?</span>
+</div>

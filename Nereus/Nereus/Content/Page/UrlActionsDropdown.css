@@ -1,0 +1,9 @@
+﻿#actions-dropdown li {
+   cursor: pointer;
+}
+
+.dropdown-menu {
+   /*display: inline-block;*/
+   /*min-width: 700px;
+   max-width: 1000px*/
+}

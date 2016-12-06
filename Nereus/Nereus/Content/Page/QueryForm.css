@@ -1,0 +1,54 @@
+﻿input[name=q] {
+   width: 600px  
+}
+
+#dialog-new-project-search {
+   display: none;
+}
+
+#query-form {
+   display: inline;
+}
+
+img#searchPic {
+    float: left;
+    display: inline-block;
+    padding-right: 10px;
+    padding-left: 5px;
+    border: none;
+    margin: 0 auto;
+    width: auto;
+    border-style: none;
+}
+#searchBox {
+    width: 100%;
+    margin: 0 auto;
+    border: none;
+    background: #e4e4e4;
+    border-style: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table.searchBar {
+    width: 100%;
+    border-style: none;
+}
+tbody {
+    margin: 0;
+}
+tr#searchBar {
+    display: inline-block;
+    background: #e4e4e4;
+    border-style: none;
+}
+section#body {
+    margin: 0;
+}
+div#center-col {
+    margin: 0;
+    padding: 0;
+}
+

@@ -1,0 +1,34 @@
+@model Nereus.ViewModels.CreateOrEditProjectViewModel
+
+@* This partial view defines form fields that will appear when creating and editing entities *@
+
+<span class="editor-label">
+    @Html.LabelFor(model => model.Project.Name)
+</span>
+<span class="editor-field">
+   @Html.EditorFor(model => model.Project.Name)
+   @Html.ValidationMessageFor(model => model.Project.Name)
+</span>
+<br/>
+<span class="editor-label">
+   @Html.LabelFor(model => model.Project.IsPrivate)
+</span>
+<span class="editor-field">
+   @Html.EditorFor(model => model.Project.IsPrivate)
+   @Html.ValidationMessageFor(model => model.Project.IsPrivate)
+</span>
+
+<span class="editor-label">
+   @Html.LabelFor(model => model.Project.SearchProvider)
+</span>
+<span class="editor-field">
+   @Html.DropDownListFor(model => model.Project.SearchProviderId, new SelectList(Model.SearchProviders, "Id", "DisplayName", 2))
+   
+@*   @Html.EditorFor(model => model.SearchProviders)
+   <select size="10">
+      @foreach (var sp in Model.SearchProviders)
+      {
+         <option>@sp.DisplayName</option>
+      }
+   </select>*@
+</span>

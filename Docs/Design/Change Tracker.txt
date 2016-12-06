@@ -1,0 +1,17 @@
+Monitor ad changes?
+Only monitor comment adds/changes?
+
+Hourly, Daily, Weekly?
+
+Show changes side by side
+Show changes like word change tracking
+
+Organize urls into groups so that each group can be looked at at once
+
+Use If-Modified-Since when requesting pages
+
+Set up emails
+
+Make it a browser plugin
+
+Host it on the AWS Cloud

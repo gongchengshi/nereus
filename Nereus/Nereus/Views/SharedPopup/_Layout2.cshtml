@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/bundles/jquery")
+    </head>
+    <body style="width:600px">
+        <header>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <a class="site-title" id="title" href="dummy">Nereus</a>
+                </div>
+                <div class="float-right">
+                   <section id="login">
+                      Logged in as: <span class="username">@User.Identity.Name</span>
+                   </section>
+                </div>
+            </div>
+        </header>
+        <div id="body">
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

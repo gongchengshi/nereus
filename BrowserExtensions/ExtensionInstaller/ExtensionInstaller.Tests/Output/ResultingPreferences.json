@@ -1,0 +1,573 @@
+{
+  "backup": {
+    "_signature": "AXP8KurAuysyYCueXMBaF9g0H4tWwZ4Q77rj9CIMHck=",
+    "_version": 4,
+    "extensions": {
+      "ids": [
+        "ahfgeienlihckogmohjhadlkjgocpleb",
+        "apdfllckaahabafndbhieahigkjlhalf",
+        "blpcfgokakmgnkcojhhkbfbldkacnbeo",
+        "coobgpohoikkiipiblmjeljniedjpjpf",
+        "eemcgdkfndhakfknompkggombfjjjeno",
+        "mfehgcgbbipciphmccgaenjidiccnmng",
+        "pjkljhegncpnkpknbcohdijeoejaedia"
+      ]
+    }
+  },
+  "browser": {
+    "clear_lso_data_enabled": true,
+    "last_known_google_url": "http://www.google.com/",
+    "last_prompted_google_url": "http://www.google.com/",
+    "pepper_flash_settings_enabled": true,
+    "window_placement": {
+      "bottom": 583,
+      "left": 299,
+      "maximized": true,
+      "right": 1212,
+      "top": 79,
+      "work_area_bottom": 1010,
+      "work_area_left": 0,
+      "work_area_right": 1680,
+      "work_area_top": 0
+    }
+  },
+  "cloud_print": {
+    "email": ""
+  },
+  "countryid_at_install": 21843,
+  "default_apps_install_state": 3,
+  "default_search_provider": {
+    "alternate_urls": [
+      "{google:baseURL}#q={searchTerms}",
+      "{google:baseURL}search#q={searchTerms}",
+      "{google:baseURL}webhp#q={searchTerms}"
+    ],
+    "enabled": true,
+    "encodings": "UTF-8",
+    "icon_url": "http://www.google.com/favicon.ico",
+    "id": "2",
+    "instant_url": "{google:baseURL}webhp?sourceid=chrome-instant&{google:RLZ}{google:instantEnabledParameter}ie={inputEncoding}",
+    "keyword": "google.com",
+    "name": "Google",
+    "prepopulate_id": "1",
+    "search_url": "{google:baseURL}search?q={searchTerms}&{google:RLZ}{google:acceptedSuggestion}{google:originalQueryForSuggestion}{google:assistedQueryStats}{google:searchFieldtrialParameter}sourceid=chrome&ie={inputEncoding}",
+    "suggest_url": "{google:baseSuggestURL}search?{google:searchFieldtrialParameter}client=chrome&hl={language}&q={searchTerms}&sugkey={google:suggestAPIKeyParameter}"
+  },
+  "dns_prefetching": {
+    "host_referral_list": [
+      2
+    ],
+    "startup_list": [
+      1
+    ]
+  },
+  "download": {
+    "directory_upgrade": true,
+    "extensions_to_open": ""
+  },
+  "extensions": {
+    "autoupdate": {
+      "next_check": "13002316460081522"
+    },
+    "chrome_url_overrides": {
+      "bookmarks": [
+        "chrome-extension://eemcgdkfndhakfknompkggombfjjjeno/main.html"
+      ]
+    },
+    "last_chrome_version": "24.0.1312.52",
+    "settings": {
+      "ahfgeienlihckogmohjhadlkjgocpleb": {
+        "active_permissions": {
+          "api": [
+            "appNotifications",
+            "management",
+            "webstorePrivate"
+          ]
+        },
+        "app_launcher_ordinal": "n",
+        "page_ordinal": "n"
+      },
+      "apdfllckaahabafndbhieahigkjlhalf": {
+        "ack_external": true,
+        "active_permissions": {
+          "api": [
+            "background",
+            "clipboardRead",
+            "clipboardWrite",
+            "notifications",
+            "unlimitedStorage"
+          ]
+        },
+        "app_launcher_ordinal": "x",
+        "from_bookmark": false,
+        "from_webstore": true,
+        "granted_permissions": {
+          "api": [
+            "background",
+            "clipboardRead",
+            "clipboardWrite",
+            "notifications",
+            "unlimitedStorage"
+          ]
+        },
+        "install_time": "13002315611248004",
+        "location": 1,
+        "manifest": {
+          "app": {
+            "launch": {
+              "web_url": "https://drive.google.com/"
+            },
+            "urls": [
+              "http://docs.google.com/",
+              "http://drive.google.com/",
+              "https://docs.google.com/",
+              "https://drive.google.com/"
+            ]
+          },
+          "background": {
+            "allow_js_access": false
+          },
+          "current_locale": "en_US",
+          "default_locale": "en_US",
+          "description": "Google Drive: create, share and keep all your stuff in one place.",
+          "icons": {
+            "128": "128.png"
+          },
+          "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDIl5KlKwL2TSkntkpY3naLLz5jsN0YwjhZyObcTOK6Nda4Ie21KRqZau9lx5SHcLh7pE2/S9OiArb+na2dn7YK5EvH+aRXS1ec3uxVlBhqLdnleVgwgwlg5fH95I52IeHcoeK6pR4hW/Nv39GNlI/Uqk6O6GBCCsAxYrdxww9BiQIDAQAB",
+          "manifest_version": 2,
+          "name": "Google Drive",
+          "offline_enabled": true,
+          "options_page": "https://drive.google.com/settings",
+          "permissions": [
+            "background",
+            "clipboardRead",
+            "clipboardWrite",
+            "notifications",
+            "unlimitedStorage"
+          ],
+          "update_url": "http://clients2.google.com/service/update2/crx",
+          "version": "6.2"
+        },
+        "page_ordinal": "n",
+        "path": "apdfllckaahabafndbhieahigkjlhalf\\6.2_0",
+        "state": 1,
+        "was_installed_by_default": true
+      },
+      "blpcfgokakmgnkcojhhkbfbldkacnbeo": {
+        "ack_external": true,
+        "active_permissions": {
+          "api": [
+            "appNotifications"
+          ]
+        },
+        "app_launcher_ordinal": "y",
+        "from_bookmark": true,
+        "from_webstore": true,
+        "granted_permissions": {
+          "api": [
+            "appNotifications"
+          ]
+        },
+        "install_time": "13002315612864004",
+        "location": 1,
+        "manifest": {
+          "app": {
+            "launch": {
+              "container": "tab",
+              "web_url": "http://www.youtube.com/"
+            },
+            "web_content": {
+              "enabled": true,
+              "origin": "http://www.youtube.com"
+            }
+          },
+          "current_locale": "en_US",
+          "default_locale": "en",
+          "description": "The world's most popular online video community.",
+          "icons": {
+            "128": "128.png"
+          },
+          "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDC/HotmFlyuz5FaHaIbVBhhL4BwbcUtsfWwzgUMpZt5ZsLB2nW/Y5xwNkkPANYGdVsJkT2GPpRRIKBO5QiJ7jPMa3EZtcZHpkygBlQLSjMhdrAKevpKgIl6YTkwzNvExY6rzVDzeE9zqnIs33eppY4S5QcoALMxuSWlMKqgFQjHQIDAQAB",
+          "name": "YouTube",
+          "permissions": [
+            "appNotifications"
+          ],
+          "update_url": "http://clients2.google.com/service/update2/crx",
+          "version": "4.2.5"
+        },
+        "page_ordinal": "n",
+        "path": "blpcfgokakmgnkcojhhkbfbldkacnbeo\\4.2.5_0",
+        "state": 1,
+        "was_installed_by_default": true
+      },
+      "coobgpohoikkiipiblmjeljniedjpjpf": {
+        "ack_external": true,
+        "app_launcher_ordinal": "w",
+        "from_bookmark": true,
+        "from_webstore": true,
+        "install_time": "13002315610706004",
+        "location": 1,
+        "manifest": {
+          "app": {
+            "launch": {
+              "web_url": "http://www.google.com/webhp?source=search_app"
+            },
+            "urls": [
+              "*://www.google.com/search",
+              "*://www.google.com/webhp",
+              "*://www.google.com/imgres"
+            ]
+          },
+          "current_locale": "en_US",
+          "default_locale": "en",
+          "description": "The fastest way to search the web.",
+          "icons": {
+            "128": "128.png",
+            "16": "16.png",
+            "32": "32.png",
+            "48": "48.png"
+          },
+          "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDIiso3Loy5VJHL40shGhUl6it5ZG55XB9q/2EX6aa88jAxwPutbCgy5d9bm1YmBzLfSgpX4xcpgTU08ydWbd7b50fbkLsqWl1mRhxoqnN01kuNfv9Hbz9dWWYd+O4ZfD3L2XZs0wQqo0y6k64n+qeLkUMd1MIhf6MR8Xz1SOA8pwIDAQAB",
+          "name": "Google Search",
+          "update_url": "http://clients2.google.com/service/update2/crx",
+          "version": "0.0.0.19"
+        },
+        "page_ordinal": "n",
+        "path": "coobgpohoikkiipiblmjeljniedjpjpf\\0.0.0.19_0",
+        "state": 1,
+        "was_installed_by_default": true
+      },
+      "pjkljhegncpnkpknbcohdijeoejaedia": {
+        "ack_external": true,
+        "active_permissions": {
+          "api": [
+            "notifications"
+          ]
+        },
+        "app_launcher_ordinal": "t",
+        "from_bookmark": false,
+        "from_webstore": true,
+        "granted_permissions": {
+          "api": [
+            "notifications"
+          ]
+        },
+        "install_time": "13002315607855004",
+        "location": 1,
+        "manifest": {
+          "app": {
+            "launch": {
+              "container": "tab",
+              "web_url": "https://mail.google.com/mail/ca"
+            },
+            "urls": [
+              "*://mail.google.com/mail/ca"
+            ]
+          },
+          "current_locale": "en_US",
+          "default_locale": "en",
+          "description": "Fast, searchable email with less spam.",
+          "icons": {
+            "128": "128.png"
+          },
+          "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDCuGglK43iAz3J9BEYK/Mz6ZhloIMMDqQSAaf3vJt4eHbTbSDsu4WdQ9dQDRcKlg8nwQdePBt0C3PSUBtiSNSS37Z3qEGfS7LCju3h6pI1Yr9MQtxw+jUa7kXXIS09VV73pEFUT/F7c6Qe8L5ZxgAcBvXBh1Fie63qb02I9XQ/CQIDAQAB",
+          "name": "Gmail",
+          "options_page": "https://mail.google.com/mail/ca/#settings",
+          "permissions": [
+            "notifications"
+          ],
+          "update_url": "http://clients2.google.com/service/update2/crx",
+          "version": "7"
+        },
+        "page_ordinal": "n",
+        "path": "pjkljhegncpnkpknbcohdijeoejaedia\\7_0",
+        "state": 1,
+        "was_installed_by_default": true
+      },
+      "mlomiejdfkolichcflejclcbmpeaniij": {
+        "mlomiejdfkolichcflejclcbmpeaniij": {
+          "active_permissions": {
+            "api": [
+              "tabs",
+              "webNavigation",
+              "webRequest",
+              "webRequestBlocking",
+              "webRequestInternal"
+            ],
+            "explicit_host": [
+              "http://*/*",
+              "https://*/*"
+            ],
+            "scriptable_host": [
+              "http://*.ghostery.com/",
+              "http://*.ghostery.com/download",
+              "http://*/*",
+              "https://*.ghostery.com/",
+              "https://*.ghostery.com/download",
+              "https://*/*"
+            ]
+          },
+          "creation_flags": 9,
+          "from_bookmark": false,
+          "from_webstore": true,
+          "granted_permissions": {
+            "api": [
+              "tabs",
+              "webNavigation",
+              "webRequest",
+              "webRequestBlocking",
+              "webRequestInternal"
+            ],
+            "explicit_host": [
+              "http://*/*",
+              "https://*/*"
+            ],
+            "scriptable_host": [
+              "http://*.ghostery.com/",
+              "http://*.ghostery.com/download",
+              "http://*/*",
+              "https://*.ghostery.com/",
+              "https://*.ghostery.com/download",
+              "https://*/*"
+            ]
+          },
+          "install_time": "13002316044206560",
+          "location": 1,
+          "manifest": {
+            "background": {
+              "page": "background.html"
+            },
+            "browser_action": {
+              "default_icon": "images/icon16_off.png",
+              "default_popup": "panel.html",
+              "default_title": "View Ghostery's findings"
+            },
+            "content_scripts": [
+              {
+                "all_frames": false,
+                "js": [
+                  "includes/ghostery-min.js"
+                ],
+                "matches": [
+                  "http://*/*",
+                  "https://*/*"
+                ],
+                "run_at": "document_start"
+              },
+              {
+                "all_frames": false,
+                "js": [
+                  "includes/ghostery_dot_com.js"
+                ],
+                "matches": [
+                  "http://*.ghostery.com/",
+                  "https://*.ghostery.com/",
+                  "http://*.ghostery.com/download",
+                  "https://*.ghostery.com/download"
+                ],
+                "run_at": "document_end"
+              }
+            ],
+            "current_locale": "en_US",
+            "default_locale": "en",
+            "description": "Protect your privacy. See who's tracking your web browsing with Ghostery.",
+            "icons": {
+              "128": "images/icon128.png",
+              "16": "images/icon16.png",
+              "32": "images/icon32.png",
+              "64": "images/icon64.png"
+            },
+            "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDWKbhv4tbugT5f8XlKtXmjzhsWjGX+ILAnBL9AOzUA2nYu9Y2P8PAxbOHSRKeLE9zHYD2MzsGgBE4LlLKGV7p5FhrtURBMJrkN5RooOH/RkAPbAvyfJ+sku5qgg2Ijrf10cxXqED39WsTaa4ZWnnkOXl9Y7XMGbuolzBz2m+SfSwIDAQAB",
+            "manifest_version": 2,
+            "minimum_chrome_version": "18.0",
+            "name": "Ghostery",
+            "options_page": "options.html",
+            "permissions": [
+              "http://*/*",
+              "https://*/*",
+              "tabs",
+              "webNavigation",
+              "webRequest",
+              "webRequestBlocking"
+            ],
+            "update_url": "http://clients2.google.com/service/update2/crx",
+            "version": "4.1.0"
+          },
+          "path": "mlomiejdfkolichcflejclcbmpeaniij\\4.1.0_0",
+          "state": 1,
+          "was_installed_by_default": false
+        }
+      },
+      "toolbar": [
+        "mlomiejdfkolichcflejclcbmpeaniij"
+      ]
+    }
+  },
+  "net": {
+    "http_server_properties": {
+      "servers": {
+        "www.google.com:443": {
+          "settings": {
+            "4": 100,
+            "5": 16
+          },
+          "supports_spdy": true
+        }
+      },
+      "version": 1
+    }
+  },
+  "ntp": {
+    "promo_resource_cache_update": "1357842004.997004"
+  },
+  "plugins": {
+    "enabled_internal_pdf3": true,
+    "enabled_nacl": true,
+    "last_internal_directory": "C:\\Users\\jeremcla\\AppData\\Local\\Google\\Chrome\\Application\\24.0.1312.52",
+    "migrated_to_pepper_flash": true,
+    "plugins_list": [
+      {
+        "enabled": true,
+        "name": "Shockwave Flash",
+        "path": "C:\\Users\\jeremcla\\AppData\\Local\\Google\\Chrome\\Application\\24.0.1312.52\\PepperFlash\\pepflashplayer.dll",
+        "version": "11.5.31.5"
+      },
+      {
+        "enabled": true,
+        "name": "Chrome Remote Desktop Viewer",
+        "path": "internal-remoting-viewer",
+        "version": ""
+      },
+      {
+        "enabled": true,
+        "name": "Native Client",
+        "path": "C:\\Users\\jeremcla\\AppData\\Local\\Google\\Chrome\\Application\\24.0.1312.52\\ppGoogleNaClPluginChrome.dll",
+        "version": ""
+      },
+      {
+        "enabled": true,
+        "name": "Chrome PDF Viewer",
+        "path": "C:\\Users\\jeremcla\\AppData\\Local\\Google\\Chrome\\Application\\24.0.1312.52\\pdf.dll",
+        "version": ""
+      },
+      {
+        "enabled": true,
+        "name": "Adobe Acrobat",
+        "path": "C:\\Program Files (x86)\\Adobe\\Reader 10.0\\Reader\\Browser\\nppdf32.dll",
+        "version": "10.1.4.38"
+      },
+      {
+        "enabled": true,
+        "name": "Java(TM) Platform SE 6 U37",
+        "path": "C:\\Program Files (x86)\\Java\\jre6\\bin\\plugin2\\npjp2.dll",
+        "version": "6.0.370.6"
+      },
+      {
+        "enabled": true,
+        "name": "Google Update",
+        "path": "C:\\Users\\jeremcla\\AppData\\Local\\Google\\Update\\1.3.21.123\\npGoogleUpdate3.dll",
+        "version": "1.3.21.123"
+      },
+      {
+        "enabled": true,
+        "name": "Shockwave Flash",
+        "path": "C:\\Windows\\SysWOW64\\Macromed\\Flash\\NPSWF32_11_5_502_110.dll",
+        "version": "11,5,502,110"
+      },
+      {
+        "enabled": true,
+        "name": "Java Deployment Toolkit 6.0.370.6",
+        "path": "C:\\Windows\\SysWOW64\\npdeployJava1.dll",
+        "version": "6.0.370.6"
+      },
+      {
+        "enabled": true,
+        "name": "Shockwave for Director",
+        "path": "C:\\Windows\\system32\\Adobe\\Director\\np32dsw.dll",
+        "version": "11.6.3r633"
+      },
+      {
+        "enabled": true,
+        "name": "Silverlight Plug-In",
+        "path": "c:\\Program Files (x86)\\Microsoft Silverlight\\5.1.10411.0\\npctrl.dll",
+        "version": "5.1.10411.0"
+      },
+      {
+        "enabled": true,
+        "name": "Adobe Flash Player"
+      },
+      {
+        "enabled": false,
+        "name": "Adobe Reader"
+      },
+      {
+        "enabled": true,
+        "name": "Adobe Shockwave Player"
+      },
+      {
+        "enabled": true,
+        "name": "Chrome PDF Viewer"
+      },
+      {
+        "enabled": true,
+        "name": "Chrome Remote Desktop Viewer"
+      },
+      {
+        "enabled": true,
+        "name": "Google Update"
+      },
+      {
+        "enabled": true,
+        "name": "Java(TM)"
+      },
+      {
+        "enabled": true,
+        "name": "Native Client"
+      },
+      {
+        "enabled": true,
+        "name": "Silverlight"
+      }
+    ]
+  },
+  "profile": {
+    "avatar_index": 3,
+    "content_settings": {
+      "clear_on_exit_migrated": true,
+      "pref_version": 1
+    },
+    "created_by_version": "23.0.1271.97",
+    "exit_type": "Normal",
+    "exited_cleanly": true,
+    "name": "DevUser1"
+  },
+  "promo": {
+    "ntp_notification_promo": [
+      {
+        "closed": false,
+        "end": 1357718340.0,
+        "gplus_required": false,
+        "group": 0,
+        "increment": 1,
+        "increment_frequency": 0,
+        "increment_max": 1,
+        "max_views": 15,
+        "num_groups": 1,
+        "segment": 1,
+        "start": 1356336000.0,
+        "text": "Have a smartphone or tablet? <a href=\"https://www.google.com/chrome/mobile/?utm_source=chrome&utm_medium=ntp&utm_campaign=ntp-promo\">Get Chrome for Mobile</a>",
+        "views": 0
+      }
+    ]
+  },
+  "session": {
+    "restore_on_startup_migrated": true
+  },
+  "sync": {
+    "suppress_start": true
+  },
+  "sync_promo": {
+    "startup_count": 2,
+    "view_count": 2
+  }
+}

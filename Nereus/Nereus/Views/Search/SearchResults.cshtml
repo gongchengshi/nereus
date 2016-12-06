@@ -1,0 +1,121 @@
+﻿@model Nereus.ViewModels.SearchResultsViewModel
+
+<div>
+  @*@Styles.Render("~/Content/Common/ThirdParty/jquery.dropdown.css")*@
+  @Styles.Render("~/Content/Common/Common.css")
+  @Styles.Render("~/Content/Page/SearchResults.css")
+
+  @*@Scripts.Render("~/Scripts/Common/ThirdParty/jquery.dropdown.js")*@
+  @Scripts.Render("~/Scripts/Common/ThirdParty/jquery.raty.js")
+  @Scripts.Render("~/Scripts/Common/Common.js")
+  @Scripts.Render("~/Scripts/Common/UrlActionsDropdown.js")
+  @Scripts.Render("~/Scripts/Site/UrlActions.js")
+  @Scripts.Render("~/Scripts/Page/SearchResults.js")
+
+  @Html.Partial("QueryForm", Model)
+
+  @Html.Partial("UrlActionsDropdown", new ViewDataDictionary { { "AnchorRight", true } })
+</div>
+<table style="margin-top: 10px; margin-left: 20px;">
+  <thead>
+    <tr>
+      @if (Model.SearchResults.TotalResults == 0)
+      {
+        <td id="num-results">No results from @Model.SearchProvidor</td>
+      }
+      else
+      {
+        <td id="num-results">
+          @((Model.SearchResults.QueryStart).ToString("n0")) - @(Model.SearchResults.QueryEnd.ToString("n0")) of @(Model.SearchResults.TotalResults > 500 ? "approximately " : string.Empty)
+          @(Model.SearchResults.TotalResults.ToString("n0")) results from @Model.SearchProvidor
+        </td>
+      }
+
+      <td class ="actions">
+        <table>
+          <tr>
+            <td class="col-summary hasTooltip" id="num-hidden" title="Number of hidden pages">@(Model.NumHidden)</td>
+            <td class="col-summary hasTooltip" id="num-irrelevant" title="Number of pages marked irrelevant">@(Model.NumIrrelevant)</td>
+          </tr>
+          <tr>
+            <td><span id="visibility-filter" class="icon-toggle hasTooltip @(Model.ShowHidden ? "checked" : "unchecked") @(Model.ContainsHidden ? "enabled" : "disabled")" title="Show/hide hidden pages"></span></td>
+            <td><span id="relevance-filter" class="icon-toggle hasTooltip @(Model.ShowIrrelevant ? "checked" : "unchecked") @(Model.ContainsIrrelevant ? "enabled" : "disabled")" title="Show/hide irrelevant pages"></span></td>
+            <td><span id="combined-filter" class="icon-toggle hasTooltip @(Model.ShowHidden || Model.ShowIrrelevant ? "checked" : "unchecked") @(Model.ContainsHidden || Model.ContainsIrrelevant ? "enabled" : "disabled")" title="Show all pages"></span></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    @{
+      foreach (var item in Model.SearchResults)
+      {
+        var urlInfo = @Model.UrlInfo[item.Url];
+
+        <tr class="url-item @(!urlInfo.SeenBefore ? "result-item-new" : string.Empty)" value="@urlInfo.ProjectUrl.Id">
+          <td>
+            <div><a href="@item.Url" target="_blank" class="result-link">@Html.Raw(string.IsNullOrWhiteSpace(item.HtmlTitle) ? item.HtmlUrl : item.HtmlTitle)</a></div>
+            <div>
+              <cite>@Html.Raw(@item.HtmlUrl)</cite>
+              @if (item.GoogleBotBlocked)
+              {
+                <img src="@Url.Content("~/Images/googlebot_blocked.png")" height="16" width="16" />
+              }
+            </div>
+            <div class="snippet">@Html.Raw(@item.HtmlSnippet)</div>
+          </td>
+          <td class="actions">
+            <img class="visibility hasTooltip @(urlInfo.ProjectUrl.Hidden ? "hidden" : "not-hidden")" src="@Url.Content("~/Images/Hash-16.png")" title="Hide result" />
+            <img class="relevance hasTooltip @(urlInfo.ProjectUrl.Irrelevant ? "irrelevant" : "not-irrelevant")" src="@Url.Content("~/Images/Button-Close-16.png")" title="Mark result irrelevant" />
+            <span><span id="rating-@urlInfo.ProjectUrl.Id" class="rating hasTooltip" score="@(urlInfo.ProjectUrl.Rating >= 0 ? urlInfo.ProjectUrl.Rating : 0)" /></span>
+            <img class="actions-dropdown-btn hasTooltip" data-dropdown="#actions-dropdown" data-horizontal-offset="8"
+                 src="@((urlInfo.HasHiddenPattern || urlInfo.HasIrrelevantPattern)? Url.Content("~/Images/arrow_down-red-16.png") : Url.Content("~/Images/arrow_down-grey-16.png"))" title="Url options" />
+            @*@Html.ImageLink("~/Images/Info-18.png", "Details", new { id = urlInfo.ProjectUrl.Id })*@
+            @if (urlInfo.UserUrl == null)
+            {
+              <div class="visited-info">Never Visited</div>
+            }
+            else
+            {
+              <div class="visited-info">Visited: @(urlInfo.UserUrl.LastViewed == null ? "Never" : urlInfo.UserUrl.LastViewed.Value.ToLocalTime().ToString("g"))</div>
+            }
+          </td>
+        </tr>
+      }
+    }
+  </tbody>
+</table>
+
+@if (Model.SearchResults.NumDuplicateResults > 0)
+{
+  <p id="dup-msg">
+      Some results are not shown because they are believed to be near duplicates<br />of those shown above. Click
+    <span class="action-link" onclick=" location.href = updateSearch(location, 'showDuplicates', true) ">here</span>
+    to see all results.
+  </p>
+}
+
+<div id="nav">
+  @if (Model.SearchResults.QueryStart > 1)
+  {
+    <span class="action-link" onclick=" location.href = updateSearch(location, 'start', 1) ">First</span>
+  }
+
+  @if (Model.SearchResults.QueryEnd < Model.SearchResults.TotalResults)
+  {
+    if ((Model.DateConstrained && Model.SearchResults.QueryEnd < 100) || !Model.DateConstrained)
+    {
+      var totalResults = string.Empty;
+      if (Model.DateConstrained && Model.SearchResults.QueryEnd > (100 - Model.SearchSettings.NumResultsPerPage))
+      {
+        totalResults = "&totalResults=" + Model.SearchResults.TotalResults;
+      }
+      <span class="action-link" onclick="location.href = (updateSearch(location, 'start', @(Model.SearchResults.QueryEnd + 1)) @(totalResults == string.Empty ? "" : "+'" + @totalResults + "'"))">Next</span>
+    }
+  }
+
+  @if (Model.DateConstrained && Model.SearchResults.QueryEnd >= 100)
+  {
+    <div>Only the first 100 search results are displayed for date constrained queries.</div>
+  }
+</div>

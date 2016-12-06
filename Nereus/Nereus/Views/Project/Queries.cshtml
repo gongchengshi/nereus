@@ -1,0 +1,29 @@
+﻿@model Nereus.ViewModels.QueriesViewModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Styles.Render("~/Content/Common/Common.css")
+@Scripts.Render("~/Scripts/Page/Queries.js")
+
+<div id="topBar">
+<h2 class="pageBody">@Model.ProjectName Queries</h2>
+</div>
+<table class="pageBody" style="margin-top: 10px;">
+   <colgroup>
+      <col class="delete"/>
+      <col class="content"/>
+      <col class="last-used"/>
+   </colgroup>
+   <tbody>
+      @foreach (var item in Model.Queries)
+      {
+         <tr class="item" id="@item.Id">
+            <td><img class="delete-query image-action hasTooltip" src="@Url.Content("~/Images/Trash-16.png")" title="Delete Query"/></td>
+            <td><a href="~/Search?q=@item.Text">@item.Text</a></td>
+            <td>@String.Format("{0:g}", item.LastUsed)</td>
+         </tr>
+      }   
+   </tbody>
+</table>

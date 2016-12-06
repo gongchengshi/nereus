@@ -1,0 +1,39 @@
+﻿@using Nereus.Models
+@model SearchProfile
+
+@Styles.Render("~/Content/Page/SearchProfile.css")
+@Scripts.Render("~/Scripts/Page/SearchProfile.js")
+
+<input type="text" value="@Model.Name" />
+<button type="button" id="search-profile-edit">Edit</button>
+<button type="button" id="search-profile-save">Save</button>
+
+@Html.Partial("SearchPeriodDropdown", Model.SearchPeriod)
+
+<textarea id="include-query" rows="2">
+   @foreach (var item in Model.GetIncludeQueries())
+   {
+      @(item + "\n")
+   }
+</textarea>
+
+<textarea id="exclude-query" rows="2">
+   @foreach (var item in Model.GetExcludeQueries())
+   {
+      @(item + "\n")
+   }
+</textarea>
+
+<textarea id="exclude-paths" rows="4">
+   @foreach (var item in Model.GetExcludePaths())
+   {
+      @(item + "\n")
+   }
+</textarea>
+
+<textarea id="include-paths" rows="4">
+   @foreach (var item in Model.GetIncludePaths())
+   {
+      @(item + "\n")
+   }
+</textarea>
